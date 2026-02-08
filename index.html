@@ -8,6 +8,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
   <main>
     <!-- HERO -->
     <div class="hero">
@@ -21,7 +22,9 @@
           Home of your favorites and more. Stream<br />
           the NBA, new Disney+ Originals, and exclusives.
         </p>
-        <button class="subscribe-btn">Subscribe Now</button>
+
+        <!-- ADDED onclick ONLY -->
+        <button class="subscribe-btn" onclick="openLogin()">Subscribe Now</button>
       </div>
     </div>
 
@@ -122,17 +125,7 @@
       <div class="footer-column">
         <h4>Connect With Us</h4>
         <div class="socials">
-          <span>👍</span>
-          <span>🐦</span>
-          <span>📸</span>
-        </div>
-        <div class="stores">
-          <a href="#">
-            <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Apple Store">
-          </a>
-          <a href="#">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play">
-          </a>
+          <span></span><span></span><span></span>
         </div>
       </div>
     </div>
@@ -140,5 +133,42 @@
       &copy; 2026 Disney. All Rights Reserved.
     </div>
   </footer>
+
+  <!-- LOGIN SCREEN OVERLAY -->
+  <div class="login-screen" id="loginScreen">
+
+    <!-- TOP LEFT LOGO (ADDED) -->
+    <div class="login-top-logo">
+      <img src="logo.png" alt="Disney+" />
+    </div>
+
+    <div class="login-box">
+      <h1>Log in or sign up to continue</h1>
+
+      <div class="login-input">
+        <span>+63</span>
+        <input type="tel" placeholder="Enter mobile number">
+      </div>
+
+      <p class="login-text">
+        We will use your information to personalize and improve your experience and send service updates.
+        We may use your data as described in our Privacy Policy and Supplemental Privacy Policy.
+        This site is protected by reCAPTCHA.
+      </p>
+
+      <p class="login-help">
+        Having trouble logging in? <a href="#">Get Help</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- SCRIPT (ADDED) -->
+  <script>
+    function openLogin() {
+      document.getElementById("loginScreen").classList.add("show");
+    }
+  </script>
+
 </body>
 </html>
+
