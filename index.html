@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Disney+ Clone</title>
+
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
@@ -13,17 +14,19 @@
     <!-- HERO -->
     <div class="hero">
       <div class="overlay"></div>
+
       <header class="top-bar">
-        <button class="login-btn">Log In</button>
+        <button class="login-btn" onclick="openLogin()">Log In</button>
       </header>
+
       <div class="content">
         <img src="logo.png" class="logo" alt="Disney+ Logo" />
+
         <p class="text">
           Home of your favorites and more. Stream<br />
           the NBA, new Disney+ Originals, and exclusives.
         </p>
 
-        <!-- ADDED onclick ONLY -->
         <button class="subscribe-btn" onclick="openLogin()">Subscribe Now</button>
       </div>
     </div>
@@ -35,11 +38,13 @@
         <h3>NBA on Disney+</h3>
         <p>Watch your favorite teams and superstars battle it out on live and exclusive select NBA games.</p>
       </div>
+
       <div class="feature">
         <div class="icon">🎬</div>
         <h3>Lots of entertainment</h3>
         <p>From Hollywood hits to K-dramas, dive into an ever-growing collection where every story matters.</p>
       </div>
+
       <div class="feature">
         <div class="icon">📱</div>
         <h3>Watch on-the-go</h3>
@@ -58,7 +63,10 @@
     <!-- STREAMING TEXT -->
     <section class="catalog">
       <h2>All of these and more, now streaming</h2>
-      <p>Disney+ is the streaming home for movies and series from Disney, Pixar, Marvel, Star Wars, National Geographic and Hulu.</p>
+      <p>
+        Disney+ is the streaming home for movies and series from Disney, Pixar,
+        Marvel, Star Wars, National Geographic and Hulu.
+      </p>
     </section>
 
     <!-- STREAMING IMAGE -->
@@ -69,6 +77,7 @@
     <!-- COMPATIBLE DEVICES -->
     <section class="devices">
       <h2>Compatible devices</h2>
+
       <div class="device-grid">
         <div class="device">
           <div class="device-icon">📺</div>
@@ -81,6 +90,7 @@
             <li>Samsung</li>
           </ul>
         </div>
+
         <div class="device">
           <div class="device-icon">💻</div>
           <h3>Computer</h3>
@@ -90,6 +100,7 @@
             <li>Windows PC</li>
           </ul>
         </div>
+
         <div class="device">
           <div class="device-icon">📱</div>
           <h3>Phone & Tablet</h3>
@@ -111,17 +122,20 @@
         <a href="#">Careers</a>
         <a href="#">Press</a>
       </div>
+
       <div class="footer-column">
         <h4>View Website In</h4>
         <a href="#">English</a>
         <a href="#">Español</a>
         <a href="#">Français</a>
       </div>
+
       <div class="footer-column">
         <h4>Need Help?</h4>
         <a href="#">Help Center</a>
         <a href="#">Contact Us</a>
       </div>
+
       <div class="footer-column">
         <h4>Connect With Us</h4>
         <div class="socials">
@@ -129,6 +143,7 @@
         </div>
       </div>
     </div>
+
     <div class="footer-copy">
       &copy; 2026 Disney. All Rights Reserved.
     </div>
@@ -137,8 +152,8 @@
   <!-- LOGIN SCREEN OVERLAY -->
   <div class="login-screen" id="loginScreen">
 
-    <!-- TOP LEFT LOGO (ADDED) -->
-    <div class="login-top-logo">
+    <!-- CLICKABLE TOP-LEFT LOGO -->
+    <div class="login-top-logo" onclick="closeLogin()">
       <img src="logo.png" alt="Disney+" />
     </div>
 
@@ -151,9 +166,9 @@
       </div>
 
       <p class="login-text">
-        We will use your information to personalize and improve your experience and send service updates.
-        We may use your data as described in our Privacy Policy and Supplemental Privacy Policy.
-        This site is protected by reCAPTCHA.
+        We will use your information to personalize and improve your experience
+        and send service updates. We may use your data as described in our Privacy
+        Policy and Supplemental Privacy Policy. This site is protected by reCAPTCHA.
       </p>
 
       <p class="login-help">
@@ -162,13 +177,16 @@
     </div>
   </div>
 
-  <!-- SCRIPT (ADDED) -->
+  <!-- SCRIPT -->
   <script>
     function openLogin() {
       document.getElementById("loginScreen").classList.add("show");
+    }
+
+    function closeLogin() {
+      document.getElementById("loginScreen").classList.remove("show");
     }
   </script>
 
 </body>
 </html>
-
