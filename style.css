@@ -398,3 +398,6 @@ footer {
   width: 80px;
   opacity: 0.9;
 }
+.login-top-logo {
+  cursor: pointer;
+}
